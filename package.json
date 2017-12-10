@@ -1,0 +1,45 @@
+{
+  "name": "Spadger_Op_Hwang",
+  "version": "1.0.0",
+  "description": "opt_backend",
+  "dependencies": {},
+  "devDependencies": {
+    "autod": "^2.8.0",
+    "egg-bin": "^3.4.0",
+    "egg-ci": "^1.7.0",
+    "egg-view": "^2.0.0",
+    "eslint": "^4.0.0",
+    "eslint-config-egg": "^4.2.0",
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-less": "^3.3.2",
+    "gulp-notify": "^3.0.0",
+    "gulp-rev": "^8.1.0",
+    "gulp-uglify": "^3.0.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "autod": "autod",
+    "lint": "eslint .",
+    "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "ci": "npm run lint && egg-bin pkgfiles --check && npm run cov",
+    "pkgfiles": "egg-bin pkgfiles"
+  },
+  "ci": {
+    "version": "6, 8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "files": [
+    "index.js"
+  ],
+  "author": "huanghe",
+  "license": "MIT"
+}
