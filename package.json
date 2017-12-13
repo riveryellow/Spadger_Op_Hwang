@@ -5,9 +5,11 @@
   "dependencies": {},
   "devDependencies": {
     "autod": "^2.8.0",
+    "egg": "^2.0.0",
     "egg-bin": "^3.4.0",
     "egg-ci": "^1.7.0",
     "egg-view": "^2.0.0",
+    "egg-view-ejs": "^2.0.0",
     "eslint": "^4.0.0",
     "eslint-config-egg": "^4.2.0",
     "gulp": "^3.9.1",

@@ -7,7 +7,7 @@ module.exports = [
     className: 'fa-dashboard',
     subMenu: [
       {
-        href: '',
+        href: '/gameManager',
         name: '武汉麻将',
       }
     ],

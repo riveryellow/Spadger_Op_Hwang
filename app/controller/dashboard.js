@@ -1,8 +1,8 @@
-const BaseController = require('egg').Controller;
+const Controller = require('egg').Controller;
 
-class DashBoardController extends BaseController {
+class DashBoardController extends Controller {
   async index(ctx){
-    await ctx.renderLayout('dashboard.html', { css: false });
+    await ctx.renderLayout('pages/dashboard.ejs', { css: false });
   }
 }
 

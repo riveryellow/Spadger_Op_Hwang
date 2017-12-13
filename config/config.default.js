@@ -9,8 +9,8 @@ module.exports = appInfo => {
 
   config.layoutPath = {
     admin: {
-      path: '/common/layout.html',
-      sidebar: '/common/sidebar.html',
+      path: '/common/layout.ejs',
+      sidebar: '/common/sidebar.ejs',
       menuTree: menuJson,
     },
     h5: '',
@@ -30,12 +30,12 @@ module.exports = appInfo => {
     preload: false,
     buffer: false,
     maxFiles: 1000,
-    jsPath: 'public/js/pages/',
+    jsPath: 'public/js/',
     cssPath: 'public/css/',
   };
   exports.view = {
     mapping: {
-      '.html': 'ejs',
+      '.ejs': 'ejs',
     },
   };
   exports.ejs = {
