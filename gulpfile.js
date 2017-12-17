@@ -51,4 +51,5 @@ gulp.task('rev-js', function() {
     .pipe(notify('js 编译完毕!'));
 });
 
+
 gulp.task('run', [ 'rev-css', 'rev-js' ]);
