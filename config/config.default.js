@@ -34,6 +34,7 @@ module.exports = appInfo => {
     cssPath: 'public/css/',
   };
   exports.view = {
+    defaultViewEngine: 'ejs',
     mapping: {
       '.ejs': 'ejs',
     },
