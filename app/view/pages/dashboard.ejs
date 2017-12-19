@@ -2,14 +2,14 @@
 <html>
 <head>
     <% include ../common/head.ejs %>
+    <!--<script src="public/js/ejs.min.js"></script>-->
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
     <% include ../common/main-header.ejs %>
     <!-- Left side column. contains the logo and sidebar -->
-    <% include ../common/menuTree.ejs %>
-
+    <%- include('../common/menutree.ejs', {menutree: menutree}) %>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 
