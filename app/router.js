@@ -2,7 +2,8 @@
 
 module.exports = app => {
   // 页面
-  app.get('/', app.controller.dashboard.index);
+  app.get('/', app.controller.menu.index);
+  //app.get('/gamemanage', app.controller.menu.gameManage);
   //app.get('/login', app.controller.login.index);
   app.get('/404', app.controller.error.index);
   app.get('/500', app.controller.error.index);
