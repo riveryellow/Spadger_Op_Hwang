@@ -25,10 +25,11 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="treeview active">
-                <a href="javascript:;">
-                    <i class="fa ion-cube"></i>
-                    <span>游戏管理</span>
+            <% for(let index in menutree){ %>
+            <li <%if(parseInt(index) + 1 == parseInt(active)){%>class="active"<%}%>>
+                <a href="<%if(parseInt(index) + 1 == parseInt(active)){%> javascript:; <%} else { %><%=menutree[index].href?menutree[index].href:"javascript:;"%><% } %>">
+                    <i class="fa <%= menutree[index].icon_class %>"></i>
+                    <span><%= menutree[index].m_name %></span>
                 </a>
                 <!--<ul class="treeview-menu">
                     <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
@@ -38,49 +39,7 @@
                             Sidebar</a></li>
                 </ul>-->
             </li>
-            <li class="treeview">
-                <a href="javascript:;">
-                    <i class="fa ion-cash"></i>
-                    <span>计费管理</span>
-                </a>
-            </li>
-            <li class="treeview">
-                <a href="javascript:;">
-                    <i class="fa ion-clipboard"></i>
-                    <span>订单管理</span>
-                </a>
-            </li>
-            <li class="treeview">
-                <a href="javascript:;">
-                    <i class="fa ion-person-stalker"></i>
-                    <span>用户管理</span>
-                </a>
-            </li>
-            <li class="treeview">
-                <a href="javascript:;">
-                    <i class="fa ion-speakerphone"></i>
-                    <span>活动管理</span>
-                </a>
-            </li>
-            <li class="treeview">
-                <a href="javascript:;">
-                    <i class="fa ion-stats-bars"></i>
-                    <span>数据统计</span>
-                </a>
-            </li>
-            <li class="treeview">
-                <a href="javascript:;">
-                    <i class="fa ion-chatbox-working"></i>
-                    <span>消息管理</span>
-                </a>
-            </li>
-            <li class="treeview">
-                <a href="javascript:;">
-                    <i class="fa ion-locked"></i>
-                    <span>权限管理</span>
-                </a>
-            </li>
-
+            <% } %>
         </ul>
     </section>
     <!-- /.sidebar -->

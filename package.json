@@ -9,6 +9,7 @@
     "egg-bin": "^3.4.0",
     "egg-ci": "^1.7.0",
     "egg-mysql": "^3.0.0",
+    "egg-validate": "^1.0.0",
     "egg-view": "^2.0.0",
     "egg-view-ejs": "^2.0.0",
     "eslint": "^4.0.0",
@@ -33,7 +34,8 @@
     "test-local": "egg-bin test",
     "cov": "egg-bin cov",
     "ci": "npm run lint && egg-bin pkgfiles --check && npm run cov",
-    "pkgfiles": "egg-bin pkgfiles"
+    "pkgfiles": "egg-bin pkgfiles",
+    "debug": "egg-bin debug"
   },
   "ci": {
     "version": "6, 8"

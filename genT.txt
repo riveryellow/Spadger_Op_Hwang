@@ -1,0 +1,24 @@
+CREATE TABLE `data_statistics` (
+	`d_date` DATE NOT NULL COMMENT '日期',
+	`pv` INT(10) UNSIGNED ZEROFILL NOT NULL,
+	`average_time` INT(11) NOT NULL COMMENT '平均在线时长（min）',
+	PRIMARY KEY (`d_date`)
+)
+COMMENT='数据统计'
+COLLATE='utf8_general_ci'
+
+CREATE TABLE `menutree` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`m_name` VARCHAR(50) NOT NULL DEFAULT '0',
+	`father_id` INT(11) NULL DEFAULT NULL,
+	`sub_id` INT(11) NULL DEFAULT NULL,
+	`order_num` INT(11) NULL DEFAULT NULL COMMENT '排列顺序',
+	`icon_class` VARCHAR(50) NULL DEFAULT 'ion-stats-bars' COMMENT 'icon样式',
+	`href` VARCHAR(50) NULL DEFAULT NULL,
+	PRIMARY KEY (`id`)
+)
+COMMENT='运营后台左侧类目树'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=9
+;
