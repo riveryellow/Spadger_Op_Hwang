@@ -1,11 +1,9 @@
-CREATE TABLE `data_statistics` (
-	`d_date` DATE NOT NULL COMMENT '日期',
-	`pv` INT(10) UNSIGNED ZEROFILL NOT NULL,
-	`average_time` INT(11) NOT NULL COMMENT '平均在线时长（min）',
-	PRIMARY KEY (`d_date`)
-)
-COMMENT='数据统计'
-COLLATE='utf8_general_ci'
+CREATE TABLE `data_traffic` (
+  `d_date` date NOT NULL COMMENT '日期',
+  `pv` bigint(20) unsigned zerofill NOT NULL,
+  `average_time` float NOT NULL COMMENT '平均在线时长（min）',
+  PRIMARY KEY (`d_date`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='访问量';
 
 CREATE TABLE `menutree` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,

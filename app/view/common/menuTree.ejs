@@ -26,18 +26,23 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
             <% for(let index in menutree){ %>
-            <li <%if(parseInt(index) + 1 == parseInt(active)){%>class="active"<%}%>>
+            <li class="treeview <%if(parseInt(index) + 1 == parseInt(active)){%>active<%}%>">
                 <a href="<%if(parseInt(index) + 1 == parseInt(active)){%> javascript:; <%} else { %><%=menutree[index].href?menutree[index].href:"javascript:;"%><% } %>">
                     <i class="fa <%= menutree[index].icon_class %>"></i>
                     <span><%= menutree[index].m_name %></span>
+                    <% if(!submenu[menutree[index].id]){%>
                 </a>
-                <!--<ul class="treeview-menu">
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-                    <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-                    <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed
-                            Sidebar</a></li>
-                </ul>-->
+                    <%} else {%>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <%for(let j in submenu[menutree[index].id]){%>
+                    <li <%if(subactive == submenu[menutree[index].id][j].id){%>class="active"<%}%>><a href="<%=submenu[menutree[index].id][j].href%>"><i class="fa fa-circle-o"></i><%=submenu[menutree[index].id][j].m_name%></a></li>
+                <%}%>
+                </ul>
+                <%}%>
             </li>
             <% } %>
         </ul>

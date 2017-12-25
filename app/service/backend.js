@@ -1,8 +1,8 @@
 const Service = require('egg').Service;
 class BackendService extends Service {
 
-  async queryStatistics() {
-    const data = await this.app.mysql.query('select * from statistics');
+  async queryTrafficStatistics() {
+    const data = await this.app.mysql.query('select * from data_traffic');
     return data;
   }
 }
